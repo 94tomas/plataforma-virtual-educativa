@@ -1,0 +1,76 @@
+<template name="registerForm">
+	<form action="" method="POST">
+          <div class="row">
+            <div class="col s11">
+              <legend>Register</legend>
+            </div>
+            <div class="col s1">
+              <a href="" id="close">X</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+                  <i class="material-icons prefix">Nombre</i>
+                  <input placeholder="Nombre" type="text" class="form-control" name="Nombre">
+                  <label for="Nombre">Nombre</label>
+            </div>
+            <div class="input-field col s6">
+                  <i class="material-icons prefix">Apellido</i>
+                  <input placeholder="Apellido" type="text" class="form-control" name="Apellido">
+                  <label for="Apellido">Apellido</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col s6">
+              <p>Seleccione su carrera<i class="material-icons prefix">input</i></p>
+            </div>
+            <div class="col s6">
+              <div class="input-field"> 
+                <div class="form-group">
+                  <select name="Carrera">
+                    <option value="Ingenieria de Sistemas">Ingenieria de Sistemas</option>
+                    <option value="Ingenieria Informatica">Ingenieria Informatica</option>
+                    <option value="Ingenieria Civil">Ingenieria Civil</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+                  <i class="material-icons prefix">assignment_ind</i>
+                  <input placeholder="Nombre de usuario" type="text" class="form-control" name="username">
+                  <label for="Nombre de usuario">Nombre de usuario</label>
+            </div>
+            <div class="input-field col s6">
+                  <i class="material-icons prefix">email</i>
+                  <input type="text" name="email" class="form-control" id="" placeholder="Email">
+                  <label for="Email">Email</label>
+            </div>
+          </div>
+          <div class="row">
+               <div class="input-field col s6"> 
+                  <i class="material-icons prefix">vpn_key</i>     
+                  <label for="password">Password</label>
+                  <input id="password" type="password" placeholder="Password" class="form-control" name="password" required>          
+               </div>
+               <div class="input-field col s6"> 
+                  <i class="material-icons prefix">vpn_key</i>     
+                  <label for="password">Re password</label>
+                  <input id="password" type="password" placeholder="Re password" class="form-control" name="Repassword" required>          
+               </div>
+            </div>        
+          <div class="row">
+            <div class="col s4">
+                <button type="submit" class="btn">Crear cuenta</button>
+            </div>
+            <div class="col s4">
+              
+            </div>
+            <div class="col s4">
+                <button type="button" id="return" class="btn">Volver</button>
+              
+            </div>
+          </div>
+        </form>
+</template>

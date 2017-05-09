@@ -1,0 +1,36 @@
+<template name="loginForm">
+ <form action="" method="POST">
+          <div class="row">
+            <div class="col s11">
+                  <legend>Login</legend>
+            </div>
+            <div class="col s1">
+                  <a href="" id="close">X</a>
+            </div>
+        </div>
+            <div class="row">
+               <div class="input-field col s6">
+                  <i class="material-icons prefix">email</i>
+                  <input placeholder="Email" id="email" type="email" class="form-control" name="email">
+                  <label for="email">Email</label>
+               </div>
+               <div class="input-field col s6"> 
+                  <i class="material-icons prefix">vpn_key</i>     
+                  <label for="password">Password</label>
+                  <input id="password" type="password" placeholder="Password" class="form-control" name="password" required>          
+               </div>
+            </div>
+            <div class="row">
+              <div class="col s4">
+                  <button type="submit" class="btn">Login</button>
+              </div>
+              <div class="col s4">
+                 <p>Crea una cuenta<i class="material-icons prefix">call_made</i></p> 
+              </div>
+              <div class="col s4">
+                  <button type="button" id="registerbtn" class="btn">Registrate!</button>      
+              </div>
+            </div>
+                    
+         </form> 
+</template>
