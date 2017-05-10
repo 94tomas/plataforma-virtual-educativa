@@ -7,6 +7,7 @@
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
+
 Template.main.events({
 	"click #login" : function(){
 		$(".panelForm").css("opacity",1);
@@ -16,3 +17,14 @@ Template.main.events({
 	}
 	
 })
+
+
+Template.main.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});
+
+Template.cursos.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});
