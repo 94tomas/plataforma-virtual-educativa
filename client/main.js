@@ -28,3 +28,8 @@ Template.cursos.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 });
+
+Template.crear.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});
