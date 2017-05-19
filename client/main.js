@@ -33,3 +33,8 @@ Template.crear.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 });
+
+Template.formcurso.onRendered(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+});

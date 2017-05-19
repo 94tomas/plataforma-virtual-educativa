@@ -25,3 +25,8 @@ materialize:materialize
 jquery@1.11.10
 accounts-password@1.3.6
 accounts-ui@1.1.9
+
+miguelalarcos:text-editor
+fortawesome:fontawesome
+twbs:bootstrap-noglyph
+babrahams:editable-text-wysiwyg-bootstrap-3
