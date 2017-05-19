@@ -14,29 +14,21 @@ Template.registerForm.events({
 			"email" : e.target.email.value,
 			"password" : e.target.password.value,
 			"profile" : {
-				"Nombre" : e.target.country.value
+				"Nombre" : e.target.Nombre.value,
+				"Apellido" : e.target.Apellido.value,
+				"Carrera" : e.target.Carrera.value
+					}
+				};
 				
-				},
-				"profile" : {
-				
-				"Apellido" : e.target.country.value
-			
-				},
-				"profile" : {
-		
-				"Carrera" : e.target.country.value
-				}
-			};
-			
-			Accounts.createUser(user, function(e){
-				if(e == undefined) {
-					$(".panelForm").css("opacity",0);				
+				Accounts.createUser(user, function(e){
+					if(e == undefined) {
+					$(".panelForm").css("opacity",0);			
 			
 					Meteor.loginWithPassword(user.username,user.password);	
-				}
-				
-			});
-			return false;
-	}
+					}
+				});
+				return false;
+			}
+			
 })
 
