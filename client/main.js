@@ -8,6 +8,12 @@
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 
+Template.main.helpers({
+  username : function(){
+    return Accounts.user().username;
+  }
+})
+
 Template.main.events({
 	"click #login" : function(){
 		$(".panelForm").css("opacity",1);

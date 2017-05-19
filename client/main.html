@@ -6,11 +6,21 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">home</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="" id="login">Ingresar</a></li>
+        {{#if currentUser}}
+          <li><a href="#" id="logout">Salir {{username}}</a></li>
+        {{else}}
+          <li><a href="#" id="login">Ingresar</a></li>  
+        {{/if}}
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#" id="ingresar">Ingresar</a></li>
+
+      {{#if currentUser}}
+          <li><a href="#" id="logout">Salir {{username}}</a></li>
+        {{else}}
+          <li><a href="#" id="login">Ingresar</a></li>  
+        {{/if}}
+
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
