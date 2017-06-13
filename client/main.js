@@ -38,6 +38,7 @@ Template.cursos.onRendered(function(){
 Template.crear.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
+    $('.modal').modal();
 });
 
 Template.formcurso.onRendered(function(){
