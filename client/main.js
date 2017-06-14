@@ -15,7 +15,7 @@ Template.main.helpers({
   elcurso: function(){
     return Curso.find();
   }
-})
+});
 
 Template.main.events({
 	"click #login" : function(){
