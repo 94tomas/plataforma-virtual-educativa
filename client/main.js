@@ -25,7 +25,7 @@ Template.main.events({
 		Meteor.logout();
 	}
 	
-})
+});
 
 
 Template.main.onRendered(function(){
