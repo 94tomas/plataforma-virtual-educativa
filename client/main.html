@@ -8,6 +8,7 @@
       <ul class="right hide-on-med-and-down">
         {{#if currentUser}}
           <li><a href="#" id="logout">Salir {{username}}</a></li>
+          <li><a href="#" id="">Editar perfil</a></li>
         {{else}}
           <li><a href="#" id="login">Ingresar</a></li>  
         {{/if}}
@@ -30,24 +31,8 @@
     {{>mainloggin}}
   </div>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <div class="row center">
-           <h1 style="color:white">Porque el futuro esta aqui</h1>
-          <h5 class="header col s12 light">porque el conocimiendo es poder</h5>
-        </div>
-        <div class="row center">
-          <a href="/" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">inicio</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="image1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
+  {{>Template.dynamic template=baner}}
+  
 
   <main>
     {{>Template.dynamic template=content}}
