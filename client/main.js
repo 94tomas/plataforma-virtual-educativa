@@ -12,6 +12,9 @@ Template.main.helpers({
   username : function(){
     return Accounts.user().username;
   },
+  ready: function(){
+    return FlowRouter.subsReady("datos");
+  },
   elcurso: function(){
     return Curso.find();
   }
@@ -55,11 +58,14 @@ Template.formcurso.events({
       descripcion: e.target.descripcion.value,
       fecha: e.target.fecha.value
     };
-    Curso.insert(datos);
-    e.target.titulo.value = "";
-    e.target.descripcion.value = "";
-    e.target.fecha.value = "";
-    return false;
+    Meteor.call("insert",datos, function(err,result){
+    });
+    //Curso.insert(datos);
+    //e.target.titulo.value = "";
+    //e.target.descripcion.value = "";
+    //e.target.fecha.value = "";
+    //return false;
 
   }
 });
+
