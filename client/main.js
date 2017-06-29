@@ -44,7 +44,7 @@ Template.cursos.onRendered(function(){
 Template.crear.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
-    $('.modal').modal();
+    //$('.modal').modal();
 });
 
 Template.formcurso.onRendered(function(){
@@ -52,4 +52,6 @@ Template.formcurso.onRendered(function(){
     $('.parallax').parallax();
 });
 
-
+Template.baner-nav.onRendered(function(){
+    $('.modal').modal();
+});

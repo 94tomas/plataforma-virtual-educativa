@@ -1,18 +1,45 @@
 <template name="baner-nav">
 	
-</template>
-<template name="baner">
 	<div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
         <div class="row center">
            <h1 style="color:white">Porque el futuro esta aqui</h1>
+           
           <h5 class="header col s12 light">porque el conocimiendo es poder</h5>
         </div>
         <div class="row center">
-          <a href="/" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">inicio</a>
-        </div>
+              
+    {{#if isInRole 'admin'}}
+        <a href="/admin" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">administrar</a>
+    {{else}}
+      {{#if isInRole 'profesor'}}
+       
+          {{#if isInRole 'profesor'}}
+
+                    <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">crear curso</a>
+                
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Registrar materia</h4>
+                    {{> formcurso}}
+                  </div>
+                </div>
+                {{else}}
+                  NO ERES PROFESOR
+                {{/if}}
+
+
+      {{else}}
+        <a href="/" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">inicio</a>
+      {{/if}}
+    {{/if}}
+
+    
+           </div>
         <br><br>
 
       </div>

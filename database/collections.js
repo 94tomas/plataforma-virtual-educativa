@@ -8,6 +8,9 @@ var CursoSchema = new SimpleSchema({
     },
     fecha: {
         type: String
+    },
+    idpro: {
+        type: String
     }
 });
 Curso.attachSchema(CursoSchema);
