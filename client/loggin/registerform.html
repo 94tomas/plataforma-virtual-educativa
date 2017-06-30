@@ -40,6 +40,12 @@
             <div class="input-field col s6">
                   <i class="material-icons prefix">assignment_ind</i>
                   <input type="text" name="username" class="form-control" id="" placeholder="Nick">
+                  {{#if msn}}
+                    <span>
+                      ERROR
+                  {{msn}}
+                    </span>
+                  {{/if}}
                   <label for="Nick">Nick</label>
             </div>
             <div class="input-field col s6">
