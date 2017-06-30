@@ -51,5 +51,3 @@ Template.formcurso.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 });
-
-

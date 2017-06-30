@@ -1,5 +1,6 @@
 Template.editarperfil.onRendered(function(){
 	$("select").material_select();
+	$('.modal').modal();
 });
 Meteor.subscribe('userData');
 Template.editarperfil.helpers({

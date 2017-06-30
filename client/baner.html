@@ -1,18 +1,28 @@
 <template name="baner-nav">
 	
-</template>
-<template name="baner">
 	<div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
         <div class="row center">
            <h1 style="color:white">Porque el futuro esta aqui</h1>
+           
           <h5 class="header col s12 light">porque el conocimiendo es poder</h5>
         </div>
         <div class="row center">
-          <a href="/" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">inicio</a>
-        </div>
+              
+    {{#if isInRole 'admin'}}
+        <a href="/admin" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">administrar</a>
+    {{else}}
+      {{#if isInRole 'profesor'}}
+        <a href="/crear_curso" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">ir a crear</a>
+      {{else}}
+        
+      {{/if}}
+    {{/if}}
+
+    
+           </div>
         <br><br>
 
       </div>

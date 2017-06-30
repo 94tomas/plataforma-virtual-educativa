@@ -6,15 +6,22 @@ Meteor.startup(() => {
     "insert": function(datos) { 
        Curso.insert(datos);
        return true;
+    },
+    "update": function(rol){
+      Roles.addUsersToRoles(rol, ['profesor']);
+      return true;
     } 
   });
   Meteor.publish('datos', function(){
     return Curso.find();
   });
-});
-Meteor.users.allow({
-  update() { return true; }
-});
-Meteor.publish("allUsers", function () {
-  return Meteor.users.find({});
+  Meteor.users.allow({
+    update() { return true; }
+  });
+  Meteor.publish("allUsers", function () {
+    return Meteor.users.find({});
+  });
+  Meteor.publish('mostrar', function(){
+    return Meteor.users.find();
+  });
 });
