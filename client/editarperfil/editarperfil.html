@@ -2,7 +2,7 @@
 
           <div class="row">
             <div class="col s11">
-              <legend>editar</legend>
+              <legend><h4>Edicion de datos personales</h4></legend>
             </div>
             <div class="col s1">
               <a href="" id="close">X</a>
@@ -37,30 +37,29 @@
                   <p>{{email}}</p>
             </div>
           </div>
-        
-        <a href="#modal1">Editar</a>
+        <a href="#modal1" class="waves-effect waves-light btn"><i class="material-icons left">mode_edit</i>Editar</a>
 
           <div id="modal1" class="modal">
               <div class="modal-content">
                   <form action="" method="POST">
                     <div class="row">
                       <div class="col s11">
-                        <legend>Register</legend>
+                        <legend>Editar</legend>
                       </div>
                       <div class="col s1">
-                        <a href="" id="close">X</a>
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">x</a>
                       </div>
                     </div>
                     <div class="row">
                       <div class="input-field col s6">
                             <i class="material-icons prefix">Nombre</i>
                             <input placeholder="Nombre" type="text" class="form-control" name="Nombre" value="{{profileNombre}}">
-                            <label for="Nombre">Nombre</label>
+                            
                       </div>
                       <div class="input-field col s6">
                             <i class="material-icons prefix">Apellido</i>
                             <input placeholder="Apellido" type="text" class="form-control" name="Apellido" value="{{profileApellido}}">
-                            <label for="Apellido">Apellido</label>
+                            
                       </div>
                     </div>
                     <div class="row">
@@ -83,17 +82,18 @@
                       <div class="input-field col s6">
                             <i class="material-icons prefix">assignment_ind</i>
                             <input type="text" name="username" class="form-control" id="" placeholder="Nick" value="{{username}}">
-                            <label for="Nick">Nick</label>
+                         
                       </div>
                       <div class="input-field col s6">
                             <i class="material-icons prefix">email</i>
                             <input type="text" name="email" class="form-control" id="" placeholder="Email" value="{{email}}">
-                            <label for="Email">Email</label>
+                            
                       </div>
                     </div>        
                     <div class="row">
                       <div class="col s4">
                           <button type="submit" class="btn">guardar</button>
+
                       </div>
                     </div>
                 </form>

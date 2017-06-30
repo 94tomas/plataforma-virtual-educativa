@@ -12,3 +12,9 @@ Meteor.startup(() => {
     return Curso.find();
   });
 });
+Meteor.users.allow({
+  update() { return true; }
+});
+Meteor.publish("allUsers", function () {
+  return Meteor.users.find({});
+});
