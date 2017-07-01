@@ -15,7 +15,7 @@
         <a href="/admin" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">administrar</a>
     {{else}}
       {{#if isInRole 'profesor'}}
-        <a href="/crear_curso" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">ir a crear</a>
+        {{> crear}}
       {{else}}
         
       {{/if}}

@@ -9,6 +9,11 @@ Meteor.startup(() => {
     },
     "update": function(rol){
       Roles.addUsersToRoles(rol, ['profesor']);
+      //Roles.removeUsersFromRoles(rol, ['profesor']);
+      return true;
+    },
+    "eliminar": function(rol){
+      Roles.removeUsersFromRoles(rol, ['profesor']);
       return true;
     } 
   });

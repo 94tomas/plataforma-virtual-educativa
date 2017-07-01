@@ -1,27 +1,32 @@
 <template name="formcurso">
   
   <form action="">
-    <div class="input-field col s12 l6">
-      <input name="titulo" type="text" id="first_name" class="validate">
-      <label for="first_name">titulo</label>
-    </div>
-    <div class="input-field col s12 l6">
-      <input name="descripcion" type="text" id="last_name" class="validate">
-      <label for="last_name">descripcion</label>
-    </div>
-    <div class="input-field col s12 l6">
-      inicio del curso:
-      <div class="input-field inline">
-        <input name="fecha" type="date" id="last_name" class="validate">
+    <div class="row">
+      <div class="col s12">
+        <input name="titulo" type="text" id="first_name" class="validate">
+        <label for="first_name">titulo</label>
       </div>
-    </div>
-    <div class="file-field input-field">
-      <div class="btn">
-        <span>imagen del curso</span>
-        <input type="file">
+      <div class="col s12">
+        <input name="descripcion" type="text" id="last_name" class="validate">
+        <label for="last_name">descripcion</label>
       </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text">
+      <div class="col s12">
+        inicio del curso:
+        <div class="input-field inline">
+          <input name="fecha" type="date" id="last_name" class="validate">
+          <label for="last_name">fecha de inicio</label>
+        </div>
+      </div>
+      <div class="col s12">
+        <div class="file-field input-field">
+          <div class="btn">
+            <span>imagen del curso</span>
+            <input type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
       </div>
     </div>
     <div class="modal-footer">

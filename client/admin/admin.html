@@ -9,10 +9,18 @@
         </thead>
         <tbody>
             {{#each lista}}
-            <tr>
-                <td>{{username}} <a name={{_id}} href="#"><i class="material-icons">assignment</i>profesor</a></td>
-                <td>{{roles}}</td>
-            </tr>
+            {{#if roles }}
+                <tr>
+                    <td>{{username}}</td>
+                    <td>{{roles}}<a name={{_id}} href="#"><i class="material-icons">delete</i>eliminar profesor</a></td>
+                </tr>
+            {{else}}
+                <tr>
+                    <td>{{username}}<a name={{_id}} href="#"><i class="material-icons">assignment</i>añadir profesor</a></td>
+                    <td>{{roles}}</td>
+                </tr>
+            {{/if}}
+            
             {{/each}}
         </tbody>
     </table>
