@@ -17,7 +17,27 @@ Template.main.helpers({
   },
   elcurso: function(){
     return Curso.find();
+  },
+  miscreaciones: function(){
+    //Meteor.subscribe('micurso', Accounts.user()._id);
+    return Curso.find();
+
   }
+});
+/*
+Template.cursos.onRendered(function() { 
+   console.log(Accounts.user()._id) 
+   Meteor.subscribe('micurso', Accounts.user()._id);
+   console.log(Meteor.subscribe('micurso', Accounts.user()._id));
+});
+*/
+Template.cursos.helpers({
+  miscreaciones (){
+    return Curso.find({idpro: Accounts.user()._id});
+    //Meteor.subscribe('micurso', Accounts.user()._id);
+    
+  }
+
 });
 
 Template.main.events({

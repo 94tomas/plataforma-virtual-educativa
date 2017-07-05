@@ -35,9 +35,15 @@
 
 {{>Template.dynamic template=baner}}
 
- {{#each elcurso}}
-  {{> cursos}}
- {{/each}}
+    {{#if isInRole 'profesor'}}
+      {{>cursos}}
+    {{else}}
+      {{#each elcurso}}
+      {{> cursos}}
+    {{/each}}
+    {{/if}}
+
+    
 
   <footer class="page-footer teal">
     <div class="container">

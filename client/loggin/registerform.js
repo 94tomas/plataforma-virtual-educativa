@@ -19,7 +19,7 @@ Template.registerForm.events({
 				"Carrera" : e.target.Carrera.value
 					}
 				};
-				console.log(user);
+				//console.log(user);
 				Accounts.createUser(user, function(e){
 					if(e == undefined) {
 					$(".panelForm").css("opacity",0);			
