@@ -3,13 +3,7 @@ import { publishComposite } from 'meteor/reywood:publish-composite';
 
 Meteor.startup(() => {
   // code to run on server at startup
-Meteor.publishComposite("micurso", function(proid){
-  return {
-    find (){
-      return Curso.find({idpro: proid});
-    }
-  }
-});
+
 
   //-------------
   Meteor.methods({ 

@@ -36,11 +36,11 @@
 {{>Template.dynamic template=baner}}
 
     {{#if isInRole 'profesor'}}
-      {{>cursos}}
+      {{> cursospro}}
     {{else}}
       {{#each elcurso}}
-      {{> cursos}}
-    {{/each}}
+        {{> cursos}}
+      {{/each}}
     {{/if}}
 
     

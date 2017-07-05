@@ -17,11 +17,6 @@ Template.main.helpers({
   },
   elcurso: function(){
     return Curso.find();
-  },
-  miscreaciones: function(){
-    //Meteor.subscribe('micurso', Accounts.user()._id);
-    return Curso.find();
-
   }
 });
 /*
@@ -31,7 +26,7 @@ Template.cursos.onRendered(function() {
    console.log(Meteor.subscribe('micurso', Accounts.user()._id));
 });
 */
-Template.cursos.helpers({
+Template.cursospro.helpers({
   miscreaciones (){
     return Curso.find({idpro: Accounts.user()._id});
     //Meteor.subscribe('micurso', Accounts.user()._id);
@@ -67,7 +62,7 @@ Template.crear.onRendered(function(){
     $('.modal').modal();
 });
 
-Template.formcurso.onRendered(function(){
+Template.cursospro.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 });
