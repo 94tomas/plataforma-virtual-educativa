@@ -19,6 +19,21 @@ Template.main.helpers({
     return Curso.find();
   }
 });
+/*
+Template.cursos.onRendered(function() { 
+   console.log(Accounts.user()._id) 
+   Meteor.subscribe('micurso', Accounts.user()._id);
+   console.log(Meteor.subscribe('micurso', Accounts.user()._id));
+});
+*/
+Template.cursospro.helpers({
+  miscreaciones (){
+    return Curso.find({idpro: Accounts.user()._id});
+    //Meteor.subscribe('micurso', Accounts.user()._id);
+    
+  }
+
+});
 
 Template.main.events({
 	"click #login" : function(){
@@ -47,7 +62,7 @@ Template.crear.onRendered(function(){
     $('.modal').modal();
 });
 
-Template.formcurso.onRendered(function(){
+Template.cursospro.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 });

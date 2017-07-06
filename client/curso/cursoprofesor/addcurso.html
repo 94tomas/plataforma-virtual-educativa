@@ -1,7 +1,19 @@
-<template name="vercurso">
- {{#if currentUser}}
+<template name="addcurso">
+ {{#if isInRole 'profesor'}}
   <div class="row">
     <div class="col s7">
+        
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">agregar material</a>
+        
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Agregar Material</h4>
+            {{> formmaterial}}
+          </div>
+        </div>
+        
       <h5>Ordenar por:</h5>
       
       <a class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip="I am tooltip">prioridad</a>
@@ -13,7 +25,7 @@
           <div class="row">
             <div class="col s3">
               <div class="card-image">
-                <img src="fondo15.jpg">
+                <img src="/fondo15.jpg">
               </div>
             </div>
             <div class="col s9">
@@ -30,7 +42,7 @@
           <div class="row">
             <div class="col s3">
               <div class="card-image">
-                <img src="fondo15.jpg">
+                <img src="/fondo15.jpg">
               </div>
             </div>
             <div class="col s9">

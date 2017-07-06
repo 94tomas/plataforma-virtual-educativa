@@ -14,3 +14,4 @@ var CursoSchema = new SimpleSchema({
     }
 });
 Curso.attachSchema(CursoSchema);
+

@@ -1,7 +1,9 @@
 import { Meteor } from 'meteor/meteor';
-
 Meteor.startup(() => {
-  // code to run on server at startup
+  //-------------------
+
+//-----------------------------
+
   Meteor.methods({ 
     "insert": function(datos) { 
        Curso.insert(datos);
@@ -9,6 +11,11 @@ Meteor.startup(() => {
     },
     "update": function(rol){
       Roles.addUsersToRoles(rol, ['profesor']);
+      //Roles.removeUsersFromRoles(rol, ['profesor']);
+      return true;
+    },
+    "eliminar": function(rol){
+      Roles.removeUsersFromRoles(rol, ['profesor']);
       return true;
     } 
   });
