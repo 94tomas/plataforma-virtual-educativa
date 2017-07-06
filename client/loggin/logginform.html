@@ -28,8 +28,11 @@
                  <p>Crea una cuenta<i class="material-icons prefix">call_made</i></p> 
               </div>
               <div class="col s4">
-                  <button type="button" id="registerbtn" class="btn">Registrate!</button>      
+                  <button type="button" id="registerbtn" class="btn">Registrate!</button>  
+                  <fb:login-button scope="public_profile,email" onlogin="checkLoggin();">
+                  </fb:login-button>    
               </div>
+                  
             </div>
                     
          </form> 
