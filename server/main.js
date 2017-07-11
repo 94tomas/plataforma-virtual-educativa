@@ -1,8 +1,10 @@
 import { Meteor } from 'meteor/meteor';
 Meteor.startup(() => {
-  //-------------------
-  
-//-----------------------------
+
+  //-------------------------
+  Meteor.publish('cursoimg', function(){
+    return imgCurso.find().cursor;
+  })
 
   Meteor.methods({ 
     "insert": function(datos) { 
