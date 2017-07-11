@@ -19,7 +19,11 @@ Meteor.startup(() => {
     "eliminar": function(rol){
       Roles.removeUsersFromRoles(rol, ['profesor']);
       return true;
-    } 
+    },
+    "insertmat": function(datosmat){
+      Material.insert(datosmat);
+      return true;
+    }
   });
   Meteor.publish('datos', function(){
     return Curso.find();
@@ -32,5 +36,8 @@ Meteor.startup(() => {
   });
   Meteor.publish('mostrar', function(){
     return Meteor.users.find();
+  });
+  Meteor.publish('datosmat', function() {
+    return Material.find();
   });
 });
