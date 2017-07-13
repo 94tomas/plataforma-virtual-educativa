@@ -21,7 +21,7 @@ Template.formcurso.events({
             });
             upload.on('end', function(error, fileObj){
                 idImgCurso = fileObj._id;
-                console.log(idImgCurso);
+                //console.log(idImgCurso);
                 if (error){
                     alert(error);
                 }

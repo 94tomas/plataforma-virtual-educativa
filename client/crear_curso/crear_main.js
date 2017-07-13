@@ -16,5 +16,4 @@ Template.formcurso.events({
     //e.target.fecha.value = "";
     //return false;
   }
-  
 });
