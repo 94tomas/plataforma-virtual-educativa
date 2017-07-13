@@ -63,3 +63,10 @@ Template.cursospro.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
 });
+
+
+Template.main.helpers({
+	fotoperfil : function(){
+		return Accounts.user().profile.foto
+	}
+});

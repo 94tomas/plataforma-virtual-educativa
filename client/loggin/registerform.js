@@ -43,7 +43,8 @@ Template.registerForm.events({
 			"profile" : {
 				"Nombre" : e.target.Nombre.value,
 				"Apellido" : e.target.Apellido.value,
-				"Carrera" : e.target.Carrera.value
+				"Carrera" : e.target.Carrera.value,
+				"foto" : "http://localhost:3000/home/arandopuma/edson/seminario/SEMINARIO/file/download/imgCurso/45ZwzwogKkteH3Dds/original/45ZwzwogKkteH3Dds.jpg"
 					}
 				};
 				//console.log(user);

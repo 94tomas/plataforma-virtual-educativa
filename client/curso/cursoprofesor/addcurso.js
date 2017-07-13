@@ -15,7 +15,8 @@ Template.formmaterial.events({
       tema: e.target.tema.value,
       detalle: e.target.detalle.value,
       idcurso: variable,
-      iduspro: Accounts.user()._id
+      iduspro: Accounts.user()._id,
+      linkvideo: e.target.video.placeholder
     };
     Meteor.call("insertmat",datosmat, function(err,result){
     });

@@ -31,6 +31,9 @@ var MaterialSchema = new SimpleSchema({
     },
     iduspro: {
         type: String
+    },
+    linkvideo: {
+        type: String
     }
 });
 Material.attachSchema(MaterialSchema);
@@ -40,15 +43,6 @@ imgCurso = new FilesCollection({
     collectionName: 'imgCurso',
     allowClientCode: false,
     storagePath: '/home/arandopuma/edson/seminario/SEMINARIO/file/imgCurso',
-    downloadRoute: '/home/arandopuma/edson/seminario/SEMINARIO/file/download',
-    permissions: 0755,
-    cacheControl: 'public, max-age=3153600'
-});
-
-VideoTema = new FilesCollection({
-    collectionName: 'VideoTema',
-    allowClientCode: false,
-    storagePath: '/home/arandopuma/edson/seminario/SEMINARIO/file/videoTema',
     downloadRoute: '/home/arandopuma/edson/seminario/SEMINARIO/file/download',
     permissions: 0755,
     cacheControl: 'public, max-age=3153600'

@@ -5,9 +5,6 @@ Meteor.startup(() => {
   Meteor.publish('cursoimg', function(){
     return imgCurso.find().cursor;
   }),
-  Meteor.publish('temavideo', function(){
-    return VideoTema.find().cursor;
-  })
 //---------------/multimedia-------------
   Meteor.methods({ 
     "insert": function(datos) { 
