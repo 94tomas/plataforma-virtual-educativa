@@ -1,26 +1,34 @@
 Template.addcurso.onRendered(function(){
     $('.modal').modal();
 });
+variable = "";
+Template.cursospro.events({
+    'click a' : function(e){
+        variable = e.target.name;
+        console.log(variable);
+    } 
+});
+
 Template.formmaterial.events({
   "submit form": function(e){
     var datosmat = {
       tema: e.target.tema.value,
-      detalle: e.target.detalle.value
+      detalle: e.target.detalle.value,
+      idcurso: variable,
+      iduspro: Accounts.user()._id
     };
     Meteor.call("insertmat",datosmat, function(err,result){
     });
-    //Curso.insert(datos);
-    //e.target.titulo.value = "";
-    //e.target.descripcion.value = "";
-    //e.target.fecha.value = "";
-    //return false;
   }
 });
-Template.addcurso.onCreated(function(){
-    Meteor.subscribe('datosmat');
+id = "";
+Template.tema.onCreated(function(){
+    id = Meteor.user()._id;
+    console.log(id);
+    Meteor.subscribe('materialdatos', id);
 });
 Template.tema.helpers({
     materiales(){
-        return Material.find();
+        return Material.find({iduspro: id});
     } 
 });

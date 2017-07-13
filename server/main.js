@@ -1,11 +1,14 @@
 import { Meteor } from 'meteor/meteor';
 Meteor.startup(() => {
 
-  //-------------------------
+  //-------------multimedia------------
   Meteor.publish('cursoimg', function(){
     return imgCurso.find().cursor;
+  }),
+  Meteor.publish('temavideo', function(){
+    return VideoTema.find().cursor;
   })
-
+//---------------/multimedia-------------
   Meteor.methods({ 
     "insert": function(datos) { 
        Curso.insert(datos);
@@ -38,6 +41,27 @@ Meteor.startup(() => {
     return Meteor.users.find();
   });
   Meteor.publish('datosmat', function() {
+    return Material.find();
+  });
+  //-------------------
+  Meteor.publishComposite("materialdatos", function(IDPRO){
+    return {
+      find: function (){
+        return Material.find({iduspro: IDPRO});
+      },
+      children: [{
+        find: function(Curso){
+          return Meteor.users.find({_id: Curso.idpro});
+        }
+      },
+      {
+        find: function(Material){
+          return Meteor.users.find({_id: Material.iduspro});
+        }
+      }]
+    }
+  });
+  Meteor.publish('temauser', function() {
     return Material.find();
   });
 });
