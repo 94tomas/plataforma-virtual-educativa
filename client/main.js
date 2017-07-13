@@ -34,9 +34,7 @@ Template.cursospro.helpers({
 });
 
 Template.main.events({
-	"click #login" : function(){
-		$(".panelForm").css("opacity",1);
-	},
+
 	"click #logout" : function(){
 		Meteor.logout();
 	}
@@ -47,6 +45,7 @@ Template.main.events({
 Template.main.onRendered(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
+    $('.modal').modal();
 });
 
 Template.cursos.onRendered(function(){

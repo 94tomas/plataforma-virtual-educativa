@@ -30,7 +30,7 @@
           <li><a href="/editarperfil" id="">Editar perfil</a></li>
         {{else}}
           
-          <li><a href="#" id="login">Ingresar</a></li>  
+          <li><a href="#modal1" id="login">Ingresar</a></li>  
         {{/if}}
       </ul>
 
@@ -47,9 +47,18 @@
     </div>
   </nav>
 
-  <div class="row"> 
-    {{>mainloggin}}
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+       <div class="row"> 
+        {{>mainloggin}}
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">salir</a>
+    </div>
   </div>
+
+  
 
 {{>Template.dynamic template=content}}
 
