@@ -1,11 +1,12 @@
 <template name="material">      
     <div class="row">
         <div class="col s8">
-            
-            <div class="video-container">
-                <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            
+            {{#each misvideos}}
+                <br>
+                <video autoplay class="responsive-video" controls width="800">
+                    <source src="{{linkvideo}}">
+                </video>
+            {{/each}}
         </div>
         <div class="col s4">
             

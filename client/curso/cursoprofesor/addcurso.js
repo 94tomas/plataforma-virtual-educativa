@@ -16,7 +16,8 @@ Template.formmaterial.events({
       detalle: e.target.detalle.value,
       idcurso: variable,
       iduspro: Accounts.user()._id,
-      linkvideo: e.target.video.placeholder
+      linkvideo: e.target.video.placeholder,
+      files: e.target.file.placeholder
     };
     Meteor.call("insertmat",datosmat, function(err,result){
     });
@@ -31,5 +32,5 @@ Template.tema.onCreated(function(){
 Template.tema.helpers({
     materiales(){
         return Material.find({iduspro: id});
-    } 
+    }
 });

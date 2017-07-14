@@ -7,37 +7,27 @@
                 <label for="last_name">titulo del tema</label>
             </div>
             <div class="col s12">
+                <input name="detalle" type="text" id="last_name" class="validate">
+                <label for="last_name">detalle del material</label>
+            </div>
+            {{>files}}
+            <div class="col s12">
                 {{#with cargarimg}}
                 <span id="progress">{{progress.get}}%</span>
                 {{else}}
                 <div class="file-field input-field">
                     <div class="btn">
-                    <span>imagen del curso</span>
+                    <span>video del curso</span>
                     <input type="file" id="imginput">
                     </div>
                     <div class="file-path-wrapper">
                     <input class="place" type="text" name="video" placeholder="{{imgDelCurso.link}}">
                     </div>
                 </div>
-                <video src="{{imgDelCurso.link}}" controls="controls"></video>
+                <h6>{{imgDelCurso.name}}</h6>
                 {{/with}}
 
             </div> 
-            <div class="col s12">
-                <input name="detalle" type="text" id="last_name" class="validate">
-                <label for="last_name">detalle del material</label>
-            </div>
-            <div class="col s12">
-                <div class="file-field input-field">
-                <div class="btn">
-                    <span>archivos del curso</span>
-                    <input type="file">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
-                </div>
-                </div>
-            </div>       
         </div>
 
         <div class="modal-footer">
@@ -45,4 +35,22 @@
         </div>
     </form>
     
+</template>
+<template name="files">
+            <div class="col s12">
+                {{#with cargarfile}}
+                    <span id="progress">{{progress.get}}%</span>
+                    {{else}}
+                    <div class="file-field input-field">
+                        <div class="btn">
+                        <span>archivos del tema</span>
+                        <input type="file" id="imginput">
+                        </div>
+                        <div class="file-path-wrapper">
+                        <input class="place" type="text" name="file" placeholder="{{imgDelCurso.link}}">
+                        </div>
+                    </div>
+                    <h6>{{imgDelCurso.name}}</h6>
+                {{/with}}
+            </div>
 </template>

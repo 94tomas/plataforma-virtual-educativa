@@ -61,4 +61,7 @@ Meteor.startup(() => {
   Meteor.publish('temauser', function() {
     return Material.find();
   });
+  Meteor.publish('materialvideo', function(videoid) {
+    return Material.find({_id: videoid});
+  });
 });

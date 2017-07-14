@@ -34,6 +34,9 @@ var MaterialSchema = new SimpleSchema({
     },
     linkvideo: {
         type: String
+    },
+    files: {
+        type: String
     }
 });
 Material.attachSchema(MaterialSchema);

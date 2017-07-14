@@ -39,3 +39,52 @@ Template.formmaterial.helpers({
         return imgCurso.findOne({_id: idImgCurso});
     }
 });
+
+
+
+
+
+
+
+
+Template.files.onCreated(function(){
+    this.cargarfile = new ReactiveVar(false);
+    Meteor.subscribe('cursoimg');
+});
+Template.files.helpers({
+    cargarfile: function(){
+        return Template.instance().cargarfile.get();
+    }
+});
+idfile = "";
+Template.files.events({ 
+    'change #imginput'(e, template){
+        if (e.currentTarget.files && e.currentTarget.files[0]) {
+            upload = imgCurso.insert({
+                file: e.currentTarget.files[0],
+                streams: 'dynamic',
+                chunkSize: 'dynamic'
+            }, false);
+            upload.on('start', function(){
+                template.cargarfile.set(this);
+            });
+            upload.on('end', function(error, fileObj){
+                idfile = fileObj._id;
+                //console.log(idfile);
+                if (error){
+                    alert(error);
+                }
+                else{
+                    //alert('File "' + fileObj.name + '"carga exitosa')
+                }
+                template.cargarfile.set(false);
+            });
+            upload.start();
+        }
+    }
+});
+Template.files.helpers({
+    imgDelCurso: function(){
+        return imgCurso.findOne({_id: idfile});
+    }
+});

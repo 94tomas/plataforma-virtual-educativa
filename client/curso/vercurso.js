@@ -17,3 +17,12 @@ Template.temaus.helpers({
         return Material.find({idcurso: temausid});
     } 
 });
+
+idmaterialus = "";
+Template.tema.events({
+    'click a' : function(e){
+        idmaterialus = e.target.name;
+        console.log(idmaterial);
+    } 
+});
+

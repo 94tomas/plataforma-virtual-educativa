@@ -10,7 +10,9 @@
             </div>
             <div class="col s9">
               <span class="card-title">{{tema}}</span>
-                <a href="#">Archivos del curso </a> | <a href="/curso/vermaterial"> video / Chat</a>
+                <a href="{{files}}?download=true" download="{{file.name}}" target="_parent">
+                  Archivos del curso
+                </a> | <a name="{{_id}}" href="/curso/vermaterial"> video / Chat</a>
               <p>{{detalle}}</p>
             </div>
           </div>
