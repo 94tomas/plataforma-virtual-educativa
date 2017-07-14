@@ -23,6 +23,10 @@ Meteor.startup(() => {
     "insertmat": function(datosmat){
       Material.insert(datosmat);
       return true;
+    },
+    "insertchat": function(chatdatos){
+      CHAT.insert(chatdatos);
+      return true;
     }
   });
   Meteor.publish('datos', function(){
@@ -40,7 +44,7 @@ Meteor.startup(() => {
   Meteor.publish('datosmat', function() {
     return Material.find();
   });
-  //-------------------
+  //-------------------------------------------------------------
   Meteor.publishComposite("materialdatos", function(IDPRO){
     return {
       find: function (){
@@ -58,10 +62,42 @@ Meteor.startup(() => {
       }]
     }
   });
+  //----------------------------------------
   Meteor.publish('temauser', function() {
     return Material.find();
   });
+  
   Meteor.publish('materialvideo', function(videoid) {
     return Material.find({_id: videoid});
+  });
+
+  Meteor.publishComposite("getMSN",function(idUs,idMe){
+		return {
+			find(){
+				return CHAT.find(
+					{$or:
+						[
+							{idSource:idMe,idDestination:idUs},
+							{idSource:idUs,idDestination:idMe}
+							]});
+			},
+			children:[
+				{
+					find(chat){
+						return Meteor.users.find({_id:chat.idSource});
+					}
+					
+				},
+				{
+					find(chat){
+						return Meteor.users.find({_id:chat.idDestination});
+						
+					}
+				}
+			]
+		}
+	});
+  Meteor.publish('michatsms', function() {
+    return CHAT.find();
   });
 });

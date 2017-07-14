@@ -1,5 +1,6 @@
 Curso = new Mongo.Collection("curso");
 Material = new Mongo.Collection("material");
+CHAT = new  Mongo.Collection("chat");
 var CursoSchema = new SimpleSchema({
     titulo: {
         type: String
@@ -17,8 +18,24 @@ var CursoSchema = new SimpleSchema({
         type: String
     }
 });
-
 Curso.attachSchema(CursoSchema);
+
+var chatSchema = new SimpleSchema({
+	idSource: {
+		type:String
+	},
+	idDestination: {
+		type:String
+	},
+	date: {
+		type:Date
+	},
+	message: {
+		type:String
+	}
+});
+CHAT.attachSchema(chatSchema)
+
 var MaterialSchema = new SimpleSchema({
     tema: {
         type: String

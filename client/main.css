@@ -106,7 +106,20 @@ footer.page-footer {
 .validate {
   color: black;
 }
+.form-control {
+  color: black;
+}
+
 	
 .place::placeholder { 
   color: white; 
+}
+.rectangle_hidden,.rectangle_hidden_client{
+	height: 400px;
+	width: 800px;
+	overflow:scroll;
+	overflow-x:hidden;
+}
+.rectangle_hidden_client{
+	width:100%;
 }

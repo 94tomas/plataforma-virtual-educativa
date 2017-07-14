@@ -1,5 +1,3 @@
-
-
 idmaterial = "";
 Template.tema.events({
     'click a' : function(e){

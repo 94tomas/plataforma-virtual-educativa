@@ -19,6 +19,11 @@ Template.formmaterial.events({
       linkvideo: e.target.video.placeholder,
       files: e.target.file.placeholder
     };
+    e.target.tema.value = "";
+    e.target.detalle.value = "";
+    e.target.video.placeholder = "";
+    e.target.file.placeholder = "";
+    e.preventDefault();
     Meteor.call("insertmat",datosmat, function(err,result){
     });
   }
@@ -27,10 +32,10 @@ id = "";
 Template.tema.onCreated(function(){
     id = Meteor.user()._id;
     console.log(id);
-    Meteor.subscribe('materialdatos', id);
+    Meteor.subscribe('temauser');
 });
 Template.tema.helpers({
     materiales(){
-        return Material.find({iduspro: id});
+        return Material.find({$and: [{idcurso: variable}, {iduspro: id}]});
     }
 });
