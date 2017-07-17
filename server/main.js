@@ -27,6 +27,14 @@ Meteor.startup(() => {
     "insertchat": function(chatdatos){
       CHAT.insert(chatdatos);
       return true;
+    },
+    "insertpregunta": function(preguntadatos){
+      Pregunta.insert(preguntadatos);
+      return true;
+    },
+    "insertresp": function(respdatos){
+      Respuestas.insert(respdatos);
+      return true;
     }
   });
   Meteor.publish('datos', function(){
@@ -71,7 +79,7 @@ Meteor.startup(() => {
     return Material.find({_id: videoid});
   });
 
-  Meteor.publishComposite("getMSN",function(idUs,idMe){
+  /*Meteor.publishComposite("getMSN",function(idUs,idMe){
 		return {
 			find(){
 				return CHAT.find(
@@ -96,8 +104,11 @@ Meteor.startup(() => {
 				}
 			]
 		}
-	});
+	});*/
   Meteor.publish('michatsms', function() {
     return CHAT.find();
+  });
+  Meteor.publish('mipregunta', function() {
+    return Pregunta.find();
   });
 });

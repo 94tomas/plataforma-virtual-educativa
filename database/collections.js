@@ -1,6 +1,8 @@
 Curso = new Mongo.Collection("curso");
 Material = new Mongo.Collection("material");
 CHAT = new  Mongo.Collection("chat");
+Pregunta = new Mongo.Collection("pregunta");
+Respuestas = new Mongo.Collection("respuestas");
 var CursoSchema = new SimpleSchema({
     titulo: {
         type: String
@@ -58,6 +60,37 @@ var MaterialSchema = new SimpleSchema({
 });
 Material.attachSchema(MaterialSchema);
 
+var PreguntaSchema = new SimpleSchema({
+    id_curso: {
+        type: String
+    },
+    id_user: {
+        type: String
+    },
+    fecha: {
+        type: Date
+    },
+    pregunta: {
+        type: String
+    }
+});
+Pregunta.attachSchema(PreguntaSchema);
+
+var RespuestasSchema = new SimpleSchema({
+    user_id: {
+		type:String
+	},
+	preg_id: {
+		type:String
+	},
+	fecha: {
+		type:Date
+	},
+	respuesta: {
+		type:String
+	}
+});
+Respuestas.attachSchema(RespuestasSchema);
 
 imgCurso = new FilesCollection({
     collectionName: 'imgCurso',

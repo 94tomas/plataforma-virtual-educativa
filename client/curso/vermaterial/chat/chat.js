@@ -12,14 +12,14 @@ Template.tema.events({
     'click a' : function(e){
         idcanal = e.target.name;
         
-        console.log(idcanal);
+        //console.log(idcanal);
     } 
 });
 Template.temaus.events({
     'click a' : function(e){
         idcanal = e.target.name;
         
-        console.log(idcanal);
+        //console.log(idcanal);
     } 
 });
 

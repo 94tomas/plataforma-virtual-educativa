@@ -2,13 +2,13 @@ idmaterial = "";
 Template.tema.events({
     'click a' : function(e){
         idmaterial = e.target.name;
-        console.log(idmaterial);
+        //console.log(idmaterial);
     } 
 });
 Template.temaus.events({
     'click a' : function(e){
         idmaterial = e.target.name;
-        console.log(idmaterial);
+        //console.log(idmaterial);
     } 
 });
 Template.material.onCreated(function(){

@@ -5,7 +5,7 @@ variable = "";
 Template.cursospro.events({
     'click a' : function(e){
         variable = e.target.name;
-        console.log(variable);
+        //console.log(variable);
     } 
 });
 
@@ -31,7 +31,7 @@ Template.formmaterial.events({
 id = "";
 Template.tema.onCreated(function(){
     id = Meteor.user()._id;
-    console.log(id);
+    //console.log(id);
     Meteor.subscribe('temauser');
 });
 Template.tema.helpers({

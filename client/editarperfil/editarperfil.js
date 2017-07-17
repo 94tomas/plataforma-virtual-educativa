@@ -27,7 +27,7 @@ Template.editarperfil.helpers({
 Meteor.subscribe('allUsers');
 Template.editarperfil.events({
   'submit form': function(e) {
-	  console.log(e.target.img2.placeholder);
+	  //console.log(e.target.img2.placeholder);
     e.preventDefault();
     var nick = {
 			"username" : e.target.username.value 	
