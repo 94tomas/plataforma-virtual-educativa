@@ -111,4 +111,7 @@ Meteor.startup(() => {
   Meteor.publish('mipregunta', function() {
     return Pregunta.find();
   });
+  Meteor.publish('mirespuesta', function() {
+    return Respuestas.find();
+  });
 });

@@ -8,7 +8,7 @@ Template.consultas.events({
 
 Template.respuesta.events({
   "submit form": function(e){
-    console.log(Accounts.user()._id);
+    //console.log(idpreg);
     var respdatos = {
       user_id: Accounts.user()._id,
       preg_id: idpreg,
