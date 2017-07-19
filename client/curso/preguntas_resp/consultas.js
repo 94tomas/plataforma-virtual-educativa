@@ -5,6 +5,12 @@ Template.cursos.events({
         //console.log(idcurs);
     } 
 });
+Template.cursospro.events({
+    'click a' : function(e){
+        idcurs = e.target.name;
+        //console.log(idcurs);
+    } 
+});
 Template.consultas.onCreated(function(){
     Meteor.subscribe('mipregunta');
 });

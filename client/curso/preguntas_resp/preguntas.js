@@ -5,6 +5,12 @@ Template.cursos.events({
         //console.log(idcur);
     } 
 });
+Template.cursospro.events({
+    'click a' : function(e){
+        idcur = e.target.name;
+        //console.log(idcur);
+    } 
+});
 Template.preguntas.events({
   "submit form": function(e){
     //console.log(Accounts.user()._id);

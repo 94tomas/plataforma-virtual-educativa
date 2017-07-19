@@ -83,6 +83,9 @@ var RespuestasSchema = new SimpleSchema({
 	preg_id: {
 		type:String
 	},
+    curso_id: {
+		type:String
+	},
 	fecha: {
 		type:Date
 	},
